@@ -12,6 +12,7 @@ This is a Full-Stack application that allows users to create accounts and admins
 - User roles: Unassigned, Admin, Manager, Software Engineer, Mechanical Engineer, Electrical Engineer
 - Create new account form
 - Login form
+- Password Resets & Encryption
 - Teams & Team Rosters
 - User Profile Images & Team Images
 - Access Rights
