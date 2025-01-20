@@ -1,4 +1,4 @@
-# Team-Manager
+# Team-Builder
 This is a Full-Stack application that allows users to create accounts and admins to assign users to teams. 
 
 ## Tech Stack
