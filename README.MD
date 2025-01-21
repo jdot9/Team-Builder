@@ -1,5 +1,5 @@
 # Team-Builder
-This is a Full-Stack application that allows users to create accounts and admins to assign each user a role on a team.
+This is a Full-Stack application that allows users to create accounts & admins to assign each user a role on a team.
 
 ## Tech Stack
 - Back-End: MySQL, Spring Boot, Java
