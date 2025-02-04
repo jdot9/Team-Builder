@@ -1,11 +1,13 @@
 package com.jdotdev.teambuilder.Model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -23,65 +25,59 @@ public class Team {
     @Column(name="photo_key")
     private String photoKey;
 
-    @OneToOne(mappedBy = "team")
-    private User user;
-
+    @OneToMany(mappedBy = "team")
+    private List<User> users;
+    
     public Team()
     {
 
     }
 
-    public Team(int teamId, String name, String photoKey, User user)
+    public Team(int teamId, String name)
     {
         this.teamId = teamId;
         this.name = name;
-        this.photoKey = photoKey;
-        this.user = user;
     }
 
-    public int getTeamId()
+    public Team(String name)
     {
+        this.name = name;
+    }
+
+    public int getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(int teamId)
-    {
+    public void setTeamId(int teamId) {
         this.teamId = teamId;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getPhotoKey()
-    {
+    public String getPhotoKey() {
         return photoKey;
     }
-    
-    public void setPhotoKey(String photoKey)
-    {
+
+    public void setPhotoKey(String photoKey) {
         this.photoKey = photoKey;
     }
 
-    public User getUser() 
-    {
-        return user;
+    public List<User> getUsers() {
+        return users;
     }
 
-    public void setUser(User user) 
-    {
-        this.user = user;
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     @Override
-    public String toString() 
-    {
-        return "Team [teamId=" + teamId + ", name=" + name + ", photoKey=" + photoKey + ", user=" + user + "]";
+    public String toString() {
+        return "Team [teamId=" + teamId + ", name=" + name + ", photoKey=" + photoKey + "]";
     }
 }
