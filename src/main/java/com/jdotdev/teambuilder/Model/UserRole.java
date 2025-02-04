@@ -28,46 +28,44 @@ public class UserRole {
 
     }
 
-    public UserRole(int userRoleId, String role, User user)
+    public UserRole(int userRoleId, String role)
     {
         this.userRoleId = userRoleId;
         this.role = role;
-        this.user = user;
     }
 
-    public int getUserRoleId()
+    public UserRole(String role, User user)
     {
+        this.role = role;
+        this.user = user;  
+    }
+
+    public int getUserRoleId() {
         return userRoleId;
     }
 
-    public void setUserRoleId(int userRoleId) 
-    {
-		this.userRoleId = userRoleId;
-	}
+    public void setUserRoleId(int userRoleId) {
+        this.userRoleId = userRoleId;
+    }
 
-    public String getRole()
-    {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(String role) 
-    {
-		this.role = role;
-	}
+    public void setRole(String role) {
+        this.role = role;
+    }
 
-    public User getUser() 
-    {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(User user) 
-    {
+    public void setUser(User user) {
         this.user = user;
     }
 
     @Override
-    public String toString() 
-    {
-        return "UserRole [userRoleId=" + userRoleId + ", role=" + role + ", user=" + user + "]";
+    public String toString() {
+        return "UserRole [userRoleId=" + userRoleId + ", role=" + role + "]";
     }
 }
